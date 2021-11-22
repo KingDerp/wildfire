@@ -12,11 +12,11 @@ locally and test. Second, the api is written in a way that one can easily deploy
 to a single server or simply use the associated Dockerfile to create a 
 standalone image that can be inserted to any number of cloud 
 solutions/architecture. Nginx would likely be replaced by your cloud provider's 
-own infrastructure. 
+own infrastructure for load balancing and reverse proxy. 
 
 ##How to Install Your Project
 
-You will need Docker 20.10.8 or higher, Docker Compose 1.25 or higher. 
+You will need Docker 20.10.8 or higher and Docker Compose 1.25 or higher. 
 
 - Instructions for Docker installation can be found at https://docs.docker.com/get-docker/
 - Instructions for Docker Compose installation can be found at https://docs.docker.com/compose/install/
@@ -24,19 +24,19 @@ You will need Docker 20.10.8 or higher, Docker Compose 1.25 or higher.
 Once these are installed go to the local instance of this github repo and run
 the following:
 
-`docker-compose up --build`
+`docker-compose --compatibility up --build`
 
 That's it. You're ready use curl or your favorite web browser 
-How to Use Your Project
 
-#Credits - resources used in the creation of this project
+`curl localhost:80/api/v0/joke`
 
+OR
 
-Include Tests
+1. Go to web browser of choice
+2. Type in `localhost:80/api/v0/joke`
+3. Refresh the page for new jokes
 
-List the License
-
-MIT License
+## MIT License
 
 Copyright (c) [2021] [Mac Farnsworth]
 
